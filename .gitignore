@@ -1,5 +1,7 @@
 .idea/
 vendor/
+temp_auto_push.bat
 .DS_Store
 .composer.lock
-composer.lock
+composer.lock.gitignore
+branch_structure.json
