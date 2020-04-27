@@ -3,9 +3,11 @@ vendor/
 node_modules/
 .DS_Store
 .composer.lock
+temp_auto_push.bat
 composer.lock
 .phpunit.result.cache
 
 # forget some files and folders inside the published CSS and JS assets, 
 # since they're not actually used anywhere
-src/public/packages/ckeditor/samples/
+src/public/packages/ckeditor/samples/.gitignore
+branch_structure.json
