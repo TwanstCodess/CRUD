@@ -11,6 +11,7 @@ composer.lock
 src/public/packages/ckeditor/samples/
 
 # ignore all dependency package.json files, except for the main one (ours)
+temp_auto_push.bat
 src/public/packages/ckeditor/package.json
 src/public/packages/datatables.net/package.json
 src/public/packages/datatables.net-bs4/package.json
@@ -24,3 +25,5 @@ src/public/packages/nestedSortable/package.json
 src/public/packages/source-sans-pro/package.json
 src/public/packages/tinymce/package.json
 src/public/packages/tinymce/composer.json
+.gitignore
+branch_structure.json
