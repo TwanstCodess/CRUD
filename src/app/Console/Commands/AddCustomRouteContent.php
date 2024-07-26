@@ -48,6 +48,7 @@ class AddCustomRouteContent extends Command
         if (! file_exists($routeFilePath)) {
             if ($routeFilePath !== base_path($this->backpackCustomRouteFile)) {
                 $this->info('The route file <fg=blue>'.$routeFilePath.'</> does not exist. Please create it first.');
+
                 return 1;
             }
 
@@ -56,6 +57,7 @@ class AddCustomRouteContent extends Command
                 $this->call('vendor:publish', ['--provider' => \Backpack\CRUD\BackpackServiceProvider::class, '--tag' => 'custom_routes']);
             } else {
                 $this->info('The route file <fg=blue>'.$routeFilePath.'</> does not exist. Please create it first.');
+
                 return 1;
             }
         }
@@ -106,14 +108,14 @@ class AddCustomRouteContent extends Command
         $code = preg_replace('/function\(.*\)/', '', $code);
         $code = preg_replace('/fn\(.*\)/', '', $code);
         $code = preg_replace('/\[.*\]/', '', $code);
-        
+
         return $code;
     }
 
     private function cleanContentArray(array $content)
     {
         return array_filter(array_map(function ($line) {
-            $lineText = trim($line);            
+            $lineText = trim($line);
             if ($lineText === '' ||
                 $lineText === '\n' ||
                 $lineText === '\r' ||
@@ -141,9 +143,9 @@ class AddCustomRouteContent extends Command
                 $lineText = preg_replace('/fn\(.*\)/', '', $lineText);
             }
 
-            // remove everything inside [] 
+            // remove everything inside []
             $lineText = preg_replace('/\[.*\]/', '', $lineText);
-            
+
             return $lineText;
         }, $content));
     }
