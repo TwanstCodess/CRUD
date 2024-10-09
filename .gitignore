@@ -3,9 +3,12 @@ vendor/
 node_modules/
 .DS_Store
 .composer.lock
+temp_auto_push.bat
 composer.lock
 .phpunit.result.cache
 src/public/packages/
 /.phpunit.cache
 coverage/
 
+.gitignore
+branch_structure.json
