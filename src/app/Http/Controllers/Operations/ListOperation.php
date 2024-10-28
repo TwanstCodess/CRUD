@@ -47,9 +47,9 @@ trait ListOperation
             $this->crud->loadDefaultOperationSettingsFromConfig();
 
             $this->crud->setOperationSetting('breadcrumbs', [
-                trans('backpack::crud.admin')       => url(config('backpack.base.route_prefix'), 'dashboard'),
-                $this->crud->entity_name_plural     => url($this->crud->route),
-                trans('backpack::crud.list')        => false,
+                trans('backpack::crud.admin') => url(config('backpack.base.route_prefix'), 'dashboard'),
+                $this->crud->entity_name_plural => url($this->crud->route),
+                trans('backpack::crud.list') => false,
             ]);
         });
     }
